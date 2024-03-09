@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Gallery</title>
+    <style>
+      body {
+        font-family: "Space Mono", sans-serif;
+        background-color: #f7cb80;
+      }
+
+      .media-gallery {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 7px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      /* organise videos and audio into grid containers */
+      .video-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* creates a 4-column grid */
+        gap: 10px; /* uniform gap between grid items */
+      }
+
+      .audio-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }
+
+      .video-container video,
+      .audio-container audio {
+        width: 100%;
+        border: 1px solid #fae4b9;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+
+      iframe {
+        width: calc(33% - 20px); /* sets width for remaining media */
+        max-width: 300px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media-gallery">
+      <h1>Media Gallery</h1>
+
+      <section class="videos">
+        <h2>Videos</h2>
+        <div class="video-container">
+          <video
+            src="./videos/Frontend web development complete overview.mp4"
+            controls
+            muted
+          >
+            Frontend web development overview
+          </video>
+          <video
+            src="./videos/How principled coders outperform the competition.mp4"
+            controls
+            muted
+          >
+            How principled coders outperform the competition
+          </video>
+          <video
+            src="./videos/Learn HTML tables in 3 minutes.mp4"
+            controls
+            muted
+          >
+            Learn HTML tables
+          </video>
+          <video
+            src="./videos/25 VS Code Productivity Tips and Speed Hacks.mp4"
+            controls
+            muted
+          >
+            VS Code Productivity Tips
+          </video>
+        </div>
+      </section>
+      <br />
+
+      <section class="audios">
+        <h2>Audios</h2>
+        <div class="audio-container">
+          <audio src="./audios/cold - joey b ft sarkodie.mp3" controls muted>
+            Audio 1
+          </audio>
+          <audio
+            src="./audios/do i remix - phyno ft. burna boy.mp3"
+            controls
+            muted
+          >
+            Audio 2
+          </audio>
+          <audio src="./audios/mnike - dj maphorisa.mp3" controls muted>
+            Audio 3
+          </audio>
+          <audio src="./audios/ojapiano - kcee.mp3" controls muted>
+            Audio 4
+          </audio>
+          <audio
+            src="./audios/wotowoto seasoning - odumodublack ft black sheriff.mp3"
+            controls
+            muted
+          >
+            Audio 5
+          </audio>
+        </div>
+      </section>
+      <br />
+
+      <section class="yt-vids">
+        <h2>YouTube Videos</h2>
+        <iframe
+          src="https://www.youtube.com/embed/zOjov-2OZ0E?si=cz_hWNEcthodyPmb"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/-_X6PhkjpzU?si=YVeZDvjgsM0ENPC_"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/CIRGjwYgdT4?si=DFXjYbxfkeKl6NbK"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </div>
+  </body>
+</html>
